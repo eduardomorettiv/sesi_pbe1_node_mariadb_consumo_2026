@@ -1,0 +1,323 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-12T13:52:43.329Z",
+  "__export_source": "Backend Generator SQL",
+  "resources": [
+    {
+      "_id": "wrk_wmllblp0r",
+      "parentId": null,
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "name": "Registro de consumo de energia API Collection",
+      "description": "Coleção gerada automaticamente para testes no Insomnia / Postman",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_82cvg48pz",
+      "parentId": "wrk_wmllblp0r",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "http://localhost:3000"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "base_url"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1794491563329,
+      "_type": "environment"
+    },
+    {
+      "_id": "fld_0_qcv12p",
+      "parentId": "wrk_wmllblp0r",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "name": "USUARIO",
+      "description": "Endpoints para a tabela usuario",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -10,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_all_0",
+      "parentId": "fld_0_qcv12p",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/usuario",
+      "name": "Listar usuario",
+      "description": "Retorna todos os registros de usuario",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 10,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_id_0",
+      "parentId": "fld_0_qcv12p",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/usuario/1",
+      "name": "Buscar usuario por ID",
+      "description": "Retorna um registro específico pelo id",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 20,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_post_0",
+      "parentId": "fld_0_qcv12p",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/usuario",
+      "name": "Criar usuario",
+      "description": "Cria um novo registro na tabela usuario",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"exemplo\",\n  \"email\": \"exemplo\",\n  \"senha\": \"exemplo\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 30,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_put_0",
+      "parentId": "fld_0_qcv12p",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/usuario/1",
+      "name": "Atualizar usuario",
+      "description": "Atualiza um registro existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"exemplo\",\n  \"email\": \"exemplo\",\n  \"senha\": \"exemplo\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 40,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_0",
+      "parentId": "fld_0_qcv12p",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/usuario/1",
+      "name": "Deletar usuario",
+      "description": "Remove um registro pelo ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 50,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_1_mpmvm2",
+      "parentId": "wrk_wmllblp0r",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "name": "CONSUMO",
+      "description": "Endpoints para a tabela consumo",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -20,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_get_all_1",
+      "parentId": "fld_1_mpmvm2",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/consumo",
+      "name": "Listar consumo",
+      "description": "Retorna todos os registros de consumo",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 10,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_get_id_1",
+      "parentId": "fld_1_mpmvm2",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/consumo/1",
+      "name": "Buscar consumo por ID",
+      "description": "Retorna um registro específico pelo id",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 20,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_post_1",
+      "parentId": "fld_1_mpmvm2",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/consumo",
+      "name": "Criar consumo",
+      "description": "Cria um novo registro na tabela consumo",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"usuarioId\": 1,\n  \"local\": \"exemplo\",\n  \"equipamento\": \"exemplo\",\n  \"consumoKwh\": 1,\n  \"mesReferencia\": \"exemplo\",\n  \"status\": \"exemplo\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 30,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_put_1",
+      "parentId": "fld_1_mpmvm2",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/consumo/1",
+      "name": "Atualizar consumo",
+      "description": "Atualiza um registro existente",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"usuarioId\": 1,\n  \"local\": \"exemplo\",\n  \"equipamento\": \"exemplo\",\n  \"consumoKwh\": 1,\n  \"mesReferencia\": \"exemplo\",\n  \"status\": \"exemplo\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": 40,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_delete_1",
+      "parentId": "fld_1_mpmvm2",
+      "modified": 1794491563329,
+      "created": 1794491563329,
+      "url": "{{ _.base_url }}/api/consumo/1",
+      "name": "Deletar consumo",
+      "description": "Remove um registro pelo ID",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": 50,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    }
+  ]
+}

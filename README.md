@@ -1,41 +1,19 @@
-# 🚀 Registro de consumo de energia
+# Gestão de resíduos Sólidos
 
-Backend Node.js + Express gerado automaticamente a partir do script SQL para **MYSQL**.
+## Descrição
+Atividade 1 de backend com **CRUDS** e Banco de Dados
 
-## 🛠️ Como rodar o projeto
+## Diagrama de classes
+![Imagem](./docs/der_residuos.png)
 
-1. **Instale as dependências:**
-   ```bash
-   npm install
-   ```
+## Tecnologias
+- Node modules
+- Vs code
+- Insomnia
+- Maria DB
 
-2. **Configure o banco de dados:**
-   Certifique-se de que o **MYSQL** está rodando e execute o seu script SQL para criar as tabelas.
-   Confira as credenciais no arquivo `.env`.
-
-3. **Inicie o servidor:**
-   ```bash
-   # Modo Produção
-   npm start
-
-   # Modo Desenvolvimento (Com auto-reload)
-   npm run dev
-   ```
-
-## 📌 Endpoints da API
-
-### Tabela `usuario`
-- `GET /api/usuario` - Listar todos
-- `GET /api/usuario/:id` - Obter por ID
-- `POST /api/usuario` - Criar novo
-- `PUT /api/usuario/:id` - Atualizar por ID
-- `DELETE /api/usuario/:id` - Deletar por ID
-
-### Tabela `consumo`
-- `GET /api/consumo` - Listar todos
-- `GET /api/consumo/:id` - Obter por ID
-- `POST /api/consumo` - Criar novo
-- `PUT /api/consumo/:id` - Atualizar por ID
-- `DELETE /api/consumo/:id` - Deletar por ID
-
-"# sesi_pbe1_node_mariadb_consumo_2026" 
+## Passo a passo para testar
+1. Clone este repositório e abra com o vs code
+2. Rode `npm run dev` no terminal
+3. Ligue o XAMPP e cole o **db/script.sql**
+4. Abra o insominia e teste com `http://localhost:3000`
