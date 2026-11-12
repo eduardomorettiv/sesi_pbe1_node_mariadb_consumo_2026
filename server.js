@@ -18,12 +18,9 @@ app.get('/health', (req, res) => {
 });
 
 // Rotas da API geradas a partir do SQL
-app.use('/api/usuario', usuarioRoutes);
-app.use('/api/consumo', consumoRoutes);
+app.use('/usuario', usuarioRoutes);
+app.use('/consumo', consumoRoutes);
 
 app.listen(PORT, () => {
   console.log(`Servidor Backend rodando em http://localhost:${PORT}`);
-  console.log(`Endpoints disponíveis:`);
-  console.log(`   - http://localhost:${PORT}/api/usuario`);
-  console.log(`   - http://localhost:${PORT}/api/consumo`);
 });

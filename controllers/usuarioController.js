@@ -10,16 +10,22 @@ export const getAll = async (req, res) => {
   }
 };
 
-// GET /api/usuario/:id - Buscar por ID
-export const getById = async (req, res) => {
-  try {
-    const [rows] = await db.query('SELECT * FROM usuario WHERE id = ?', [req.params.id]);
-    if (rows.length === 0) return res.status(404).json({ success: false, message: 'Registro não encontrado' });
-    res.json({ success: true, data: rows[0] });
-  } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
-  }
-};
+export const login = (req, res) => {
+    const { email, senha } = req.body
+    const sql = 'SELECT id, nome, email FROM usuario WHERE email = ? AND senha = password(?);'
+    con.query(sql, [email, senha], (err, results) => {
+        if (err) {
+            console.error(err)
+            res.status(500).json({ erro: 'Erro ao listar usuários' })
+        } else {
+            if (results.length == 0) {
+                res.status(404).json("Acesso negado, credenciais inválidas")
+            } else {
+                res.json(results)
+            }
+        }
+    })
+}
 
 // POST /api/usuario - Criar registro
 export const create = async (req, res) => {

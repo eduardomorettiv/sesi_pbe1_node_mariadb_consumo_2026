@@ -10,17 +10,6 @@ export const getAll = async (req, res) => {
   }
 };
 
-// GET /api/consumo/:id - Buscar por ID
-export const getById = async (req, res) => {
-  try {
-    const [rows] = await db.query('SELECT * FROM consumo WHERE id = ?', [req.params.id]);
-    if (rows.length === 0) return res.status(404).json({ success: false, message: 'Registro não encontrado' });
-    res.json({ success: true, data: rows[0] });
-  } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
-  }
-};
-
 // POST /api/consumo - Criar registro
 export const create = async (req, res) => {
   try {
