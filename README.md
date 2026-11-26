@@ -1,7 +1,7 @@
-# Gestão de resíduos Sólidos
+# Registro de Consumo de Energia
 
 ## Descrição
-Atividade 1 de backend com **CRUDS** e Banco de Dados
+Atividade 3 de backend com **CRUDS** e Banco de Dados
 
 ## Diagrama de classes
 ![Imagem](./docs/der_energia.png)
@@ -26,7 +26,7 @@ Atividade 1 de backend com **CRUDS** e Banco de Dados
 ![Imagem](./docs/usuario/excluir.png)
 ![Imagem](./docs/usuario/login.png)
 
-## Uso de IA
+## Consumo
 ![Imagem](./docs/consumo/listar.png)
 ![Imagem](./docs/consumo/cadastrar.png)
 ![Imagem](./docs/consumo/alterar.png)

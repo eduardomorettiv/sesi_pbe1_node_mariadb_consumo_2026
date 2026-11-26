@@ -49,3 +49,18 @@ export const remove = async (req, res) => {
     res.status(500).json({ success: false, error: error.message });
   }
 };
+
+// GET /consumo/media - Calcular média e listar registros
+export const media = async (req, res) => {
+  try {
+    const [mediaRows] = await db.query(
+      'SELECT AVG(consumoKwh) AS Media FROM consumo'
+    );
+    const [eventos] = await db.query('SELECT * FROM consumo');
+
+    res.json({ media: mediaRows, eventos });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
