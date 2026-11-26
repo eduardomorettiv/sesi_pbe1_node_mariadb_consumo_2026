@@ -1,4 +1,4 @@
-import db from '../config/db.js';
+import db from '../db.js';
 
 // GET /api/consumo - Listar todos
 export const getAll = async (req, res) => {

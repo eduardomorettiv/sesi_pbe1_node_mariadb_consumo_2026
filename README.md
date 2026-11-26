@@ -5,6 +5,7 @@ Atividade 3 de backend com **CRUDS** e Banco de Dados
 
 ## Diagrama de classes
 ![Imagem](./docs/der_energia.png)
+![Imagem](./docs/diagrama.png)
 
 ## Tecnologias
 - Node modules

@@ -1,4 +1,4 @@
-import db from '../config/db.js';
+import db from '../db.js';
 
 // GET /api/usuario - Listar todos
 export const getAll = async (req, res) => {
@@ -10,29 +10,29 @@ export const getAll = async (req, res) => {
   }
 };
 
-export const login = (req, res) => {
-    const { email, senha } = req.body
-    const sql = 'SELECT id, nome, email FROM usuario WHERE email = ? AND senha = password(?);'
-    con.query(sql, [email, senha], (err, results) => {
-        if (err) {
-            console.error(err)
-            res.status(500).json({ erro: 'Erro ao listar usuários' })
-        } else {
-            if (results.length == 0) {
-                res.status(404).json("Acesso negado, credenciais inválidas")
-            } else {
-                res.json(results)
-            }
-        }
-    })
-}
+export const login = async (req, res) => {
+  try {
+    const { email, senha } = req.body;
+    const sql = 'SELECT id, nome, email FROM usuario WHERE email = ? AND senha = password(?)';
+    const [results] = await db.query(sql, [email, senha]);
+
+    if (results.length === 0) {
+      return res.status(404).json('Acesso negado, credenciais inválidas');
+    }
+
+    res.json(results);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ erro: 'Erro ao listar usuários' });
+  }
+};
 
 // POST /api/usuario - Criar registro
 export const create = async (req, res) => {
   try {
     const { nome, email, senha } = req.body;
     const [result] = await db.query(
-      'INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)',
+      'INSERT INTO usuario (nome, email, senha) VALUES (?, ?, password(?))',
       [nome, email, senha]
     );
     res.status(201).json({ success: true, id: result.insertId, message: 'Registro criado com sucesso' });
@@ -46,7 +46,7 @@ export const update = async (req, res) => {
   try {
     const { nome, email, senha } = req.body;
     const [result] = await db.query(
-      'UPDATE usuario SET nome = ?, email = ?, senha = ? WHERE id = ?',
+      'UPDATE usuario SET nome = ?, email = ?, senha = password(?) WHERE id = ?',
       [nome, email, senha, req.params.id]
     );
     if (result.affectedRows === 0) return res.status(404).json({ success: false, message: 'Registro não encontrado' });
